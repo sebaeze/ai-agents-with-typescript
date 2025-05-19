@@ -1,2 +1,5 @@
-# ai-agents-with-typescript
-This repo provides several implementations of AI-Agents using Typescripts
+# AI Agents with Typescript
+
+The purpose of this space is to explain and demostrate the potential of AI Agents using entirely Typescript
+
+##
