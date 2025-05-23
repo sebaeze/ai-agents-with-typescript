@@ -74,7 +74,7 @@ The approach consist of prompt a LLM in order to generate a list of "thoughts", 
     PINECONE_INDEX_NAME="your-pinecone-index-name"
 
     # Optional: Override default Ollama models and API URL
-    OLLAMA_MODEL="llama2" # Model for the chat LLM
+    OLLAMA_MODEL="llama2"
     OLLAMA_EMBEDDINGS_MODEL="nomic-embed-text:latest" # Model for generating embeddings
     OLLAMA_EMBEDDINGS_URL="http://localhost:11434/api/embeddings" # Ollama embeddings API endpoint
     ```
