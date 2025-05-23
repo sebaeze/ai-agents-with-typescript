@@ -1,0 +1,28 @@
+{
+  "name": "ai-agents-with-typescript",
+  "version": "1.0.0",
+  "description": "This repo is intended to explain how to create AI Agents using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AI",
+    "agent",
+    "typescript",
+    "langchain",
+    "RAG"
+  ],
+  "author": "sebaeze@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.44",
+    "@langchain/core": "^0.3.57",
+    "@langchain/ollama": "^0.2.0",
+    "@langchain/pinecone": "^0.2.0",
+    "@pinecone-database/pinecone": "5",
+    "@types/node": "^22.15.21",
+    "dotenv": "^16.5.0",
+    "langchain": "^0.3.27"
+  }
+}
