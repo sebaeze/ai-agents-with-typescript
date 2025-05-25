@@ -5,7 +5,6 @@ import { createRetrievalChain } from "langchain/chains/retrieval";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { Document } from "@langchain/core/documents";
-import * as dotenv from 'dotenv';
 import fetch from 'node-fetch'; // Import node-fetch
 
 import "dotenv/config";
@@ -81,6 +80,7 @@ async function main() {
         apiKey: pineconeApiKey,
     });
 
+    console.log("...pineconeIndexName: ",pineconeIndexName,";");
     const pineconeIndex = pinecone.Index(pineconeIndexName);
 
     const ollamaChatModel = new ChatOllama({
@@ -112,7 +112,8 @@ async function main() {
         },
         {
             pineconeIndex,
-            textKey: "text", 
+            namespace: "ns-markdown-docs",
+            //textKey: "text",
         }
     );
 
@@ -152,6 +153,23 @@ async function main() {
 
         try {
             console.log("\nProcesando tu consulta...\n");
+            //
+             // --- MODIFICATION START: Explicitly log Pinecone query results ---
+            console.log(`Consultando Pinecone directamente con el retriever para la consulta: "${query}"`);
+            // The 'retriever' is configured with your PineconeStore and embedding function.
+            // Calling getRelevantDocuments will perform the similarity search in Pinecone.
+            const pineconeDocs = await retriever.getRelevantDocuments(query);
+            console.log(`\n\n\n\nPinecone devolvió ${pineconeDocs.length} documento(s) relevante(s):`);
+            if (pineconeDocs.length > 0) {
+                pineconeDocs.forEach((doc: Document, index: number) => {
+                    console.log(`--- Documento Pinecone ${index + 1} ---`);
+                    console.log(`Contenido (primeros 200 caracteres): ${doc.pageContent.substring(0, 200)}...`);
+                    console.log(`Metadatos: ${JSON.stringify(doc.metadata)}`); // Log all metadata
+                });
+            }
+            console.log("--- Fin de los documentos directos de Pinecone ---\n\n\n\n");
+            // --- MODIFICATION END ---
+            //
             // Invoke the new chain. The input is an object with the 'input' key.
             const result = await retrievalChain.invoke({ input: query });
 
