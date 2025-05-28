@@ -78,14 +78,18 @@ async function main() {
     if (!chromaHostUrl.startsWith("http://") && !chromaHostUrl.startsWith("https://")) {
         chromaHostUrl = "http://" + chromaHostUrl;
     }
-    console.log("\n\n CHROMA_HOST URL: ", chromaHostUrl, "\n\n");
+    console.log("\n CHROMA_HOST URL: ", chromaHostUrl);
     const vectorStore = new Chroma(embeddings, {
         collectionName: "collection_mcp",
         url: chromaHostUrl
     });
     //
     const resp = await vectorStore.addDocuments(sanitizedChunks);
-    console.log("\n\n resp: ",resp);
+    console.log("\n response: ",resp);
+    //
+    const retriever = vectorStore.asRetriever({k:1});
+    const resultSearch = await retriever._getRelevantDocuments("version control");
+    console.log("\n  search_results: ",resultSearch);
     //
 }
 //
