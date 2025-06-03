@@ -7,14 +7,17 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
+            "name": "Current file",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
             ],
-            "program": "${workspaceFolder}\\01_rag\\ingestIntoChromadb.ts",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "${relativeFile}"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "console": "integratedTerminal"
         }
     ]
 }

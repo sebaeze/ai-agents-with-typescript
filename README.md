@@ -8,6 +8,24 @@ An AI Agent is a piece of software that uses AI for executing tasks. The key dif
 /* AI Agents follow the ReAct framework, which is described in [ReAct Framework](##reAct-framework). */
 The major components of AI Agents are: planning, memory, tools and action.
 
+## Types of Agents
+
+Anthropic defines two main categories:
+- Workflow: Systems where the flow is controlled by a pre-defined path.
+- Agents: Systems where LLMs defines the flow dynamically.
+
+### Workflow Design Patterns
+
+- Prompt chainning: The final result is obtained by splitting a major work into smaller tasks, which are executed by LLMs in sequence.
+- Routing: The LLM decides the next step to execute in a flow.
+- Parallelization: A software like python, js, etc orchestrates multiple LLMs to execute task in parallel to solve a problem.
+- Orchestrator-worker: A LLM defines the tasks and orquestate multiple LLMs to execute the tasks in parallel to solve a problem.
+- Evaluator-Optimizer: A LLM evaluates the output of other LLMs and provides feedback to improve the result.
+
+
+## Major Components of AI Agents
+
+
 ### Planning
 
 This process decompone the work into smaller steps & actions. There are several strategies for planning, such as:
@@ -87,3 +105,5 @@ The approach consist of prompt a LLM in order to generate a list of "thoughts", 
 - ReAct framework: [https://arxiv.org/pdf/2210.03629](https://arxiv.org/pdf/2210.03629)
 - [https://cloud.google.com/discover/what-are-ai-agents](https://cloud.google.com/discover/what-are-ai-agents)
 - [https://aws.amazon.com/what-is/ai-agents/](https://aws.amazon.com/what-is/ai-agents/)
+- [https://www.anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
+- 

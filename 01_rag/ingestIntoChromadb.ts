@@ -1,7 +1,7 @@
 /*
 *
 */
-import "dotenv/config"; // Moved to the top for convention
+import "dotenv/config";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { OllamaEmbeddings } from "@langchain/ollama";
@@ -11,8 +11,6 @@ import path from "node:path";
 async function main() {
     //
     const fullPath = path.join(__dirname, "../test_data/mcp.pdf");
-    console.log("\n\n fullPath: ",fullPath,"*\n\n");
-    //
     const loader = new PDFLoader(fullPath,{ splitPages: false });
     const docs = await loader.load();   
     //
@@ -86,7 +84,9 @@ async function main() {
     //
     const resp = await vectorStore.addDocuments(sanitizedChunks);
     console.log("\n response: ",resp);
-    //
+    /*
+    * Example of retriever
+    */
     const retriever = vectorStore.asRetriever({k:1});
     const resultSearch = await retriever._getRelevantDocuments("version control");
     console.log("\n  search_results: ",resultSearch);
