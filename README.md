@@ -4,9 +4,11 @@ The purpose of this space is to explain and demostrate the potential of AI Agent
 
 ## What AI Agents are?
 
-An AI Agent is a piece of software that uses AI for executing tasks. The key difference between agent versus other software is the ability of reasoning and acting based on external information.
-/* AI Agents follow the ReAct framework, which is described in [ReAct Framework](##reAct-framework). */
-The major components of AI Agents are: planning, memory, tools and action.
+An AI Agent is a piece of software that uses AI for executing tasks. 
+
+The key difference between agent versus other software is the ability of reasoning and acting based on external information. An example of this behaviour is the use of ReAct framework, which is described in [ReAct Framework](##reAct-framework).
+
+Some of the components of an AI Agent are: planning, memory, tools and action.
 
 ## Types of Agents
 
