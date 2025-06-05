@@ -23,7 +23,15 @@ Anthropic defines two main categories:
 - Evaluator-Optimizer: A LLM evaluates the output of other LLMs and provides feedback to improve the result.
 
 
-## Major Components of AI Agents
+## Tool calling
+
+A tool is a function schema, which contains information such as name; description; parameters, and It is available to the LLM.
+Tool calling is the ability of a LLM to invoke the tools in order to interact with the environment, for example: get current time, fetch meetings in a calendar, etc.
+
+
+
+### References
+- [https://www.youtube.com/watch?v=h8gMhXYAv1k](https://www.youtube.com/watch?v=h8gMhXYAv1k)
 
 
 ### Planning
