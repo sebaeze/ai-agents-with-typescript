@@ -62,6 +62,23 @@ The approach consist of prompt a LLM in order to generate a list of "thoughts", 
 
 ## Popular libraries
 
+### Autogen
+
+Open source library from Microsoft for building multi-agents AI applications.
+
+Pros:
+- Enables multi-agent development
+- Includes human in the loop
+- Optimize LLM performace
+
+Cons:
+- Steep curve of learning
+- Lack of visual editor
+
+### OpenAI Agent SDK
+
+- [https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf)
+
 ### Langchain
 - Framework for bulding LLM applications
 - Pre-built interfaces and integrations
