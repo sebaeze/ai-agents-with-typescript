@@ -62,6 +62,19 @@ The approach consist of prompt a LLM in order to generate a list of "thoughts", 
 
 ## Popular libraries
 
+### Vercel AI SDK
+
+Typescript library provided by Vercel, which focus on Typescript and Next.js solutions.
+
+Pros:
+- Easy integration with Next.js/React
+- Streaming support
+- Robust documentation
+
+Cons:
+- Limited to web frameworks
+- Requires external LLM APIs
+
 ### Autogen
 
 Open source library from Microsoft for building multi-agents AI applications.
