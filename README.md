@@ -62,45 +62,19 @@ The approach consist of prompt a LLM in order to generate a list of "thoughts", 
 
 ## Popular libraries
 
-### Vercel AI SDK
+### Comparative table
 
-Typescript library provided by Vercel, which focus on Typescript and Next.js solutions.
+| Name | Provider | Description | Best For | Pros | Cons |
+| :------------------ | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Vercel AI SDK** | Vercel | A TypeScript SDK for building AI-powered applications and agents, offering a unified API for integrating various LLMs (OpenAI, Anthropic, Google, etc.) into web frameworks like React, Next.js, Svelte, and Vue. Supports streaming AI responses and tool calls. | Web developers building AI-powered web applications and UIs, especially with Next.js and React. | Unified API for multiple LLM providers; seamless integration with modern web frameworks; excellent for streaming AI responses and generative UIs; strong focus on developer experience and rapid prototyping; supports serverless functions and edge deployments. | Can feel Vercel-dependent for deployment; documentation might need more step-by-step guides for serverless tech; potentially limited support for frameworks outside the Vercel ecosystem (though expanding); troubleshooting can be challenging. |
+| **Autogen** | Microsoft | An open-source framework that enables the development of LLM applications using multiple conversable agents that can communicate, reason, and solve problems together. It simplifies complex orchestration, automation, and optimization of LLM workflows. | Building multi-agent conversation systems, automating complex workflows, code generation and debugging, and research projects requiring collaborative AI. | Simplifies multi-agent orchestration and communication; supports various agent types (Assistant, User Proxy, Group Chat Manager); built-in code execution and tool usage; robust error handling; offers Autogen Studio for low-code interaction; backed by Microsoft. | Can have a learning curve; documentation sometimes lacks enough examples; structured outputs can be challenging; integration with certain external tools might require extra effort; streaming output was a recent addition, not always available out-of-the-box in older versions. |
+| **OpenAI Assistants API** | OpenAI | A new API by OpenAI that simplifies building AI assistants by handling state management (conversation history), code execution, and knowledge retrieval. It allows developers to create persistent AI agents with baked-in instructions and tools. | Developers looking to build conversational AI assistants with persistent memory, code interpretation, and document retrieval using OpenAI models. | Abstracts away complexities like context window management and conversation history; built-in tools (Code Interpreter, Retrieval, Function Calling) simplify agent capabilities; easy to get started for beginners, even with the Playground; enables consistent and accurate responses through baked-in instructions. | Vendor lock-in to OpenAI models; less customization compared to lower-level APIs (especially in RAG); still in beta, so features and pricing might change; can be more expensive for complex usage or extensive training; retrieval system can be hit-or-miss; may lack fine-grained model controls (e.g., `top_p`, `temperature`). |
+| **LangChain** | Open-source (H. Chase, LangChain Inc.) | A comprehensive framework for developing applications powered by language models. It provides modular components for chaining LLMs with external data sources, computation, and agents, enabling complex workflows like RAG and multi-step reasoning. | Building end-to-end LLM applications, RAG systems, complex agents with tool use, and applications requiring integration with diverse data sources and APIs. | Highly modular and flexible; extensive ecosystem of integrations (LLMs, vector stores, tools); strong community support; excellent for RAG and complex prompt chaining; supports various programming languages (Python, JS/TS); constantly updated with new features. | Can have a steep learning curve due to its extensive modules and flexibility; documentation can sometimes be inconsistent or outdated given rapid development; can feel overly complex for simple tasks; potential performance overheads due to abstraction layers; dependency management can be challenging. |
+| **LlamaIndex** | Open-source (Jerry Liu, LlamaIndex Inc.) | A data framework designed to make it easy to ingest, structure, and access private or domain-specific data with LLMs. It focuses on providing tools for building knowledge-augmented applications like Q&A systems and advanced retrieval. | Applications requiring efficient data ingestion, indexing, and retrieval over large, private datasets (e.g., internal knowledge bases, document analysis, Q&A systems). | Excellent for RAG (Retrieval Augmented Generation); supports a wide range of data connectors and formats; advanced indexing strategies (vector, tree, etc.) for fast and accurate retrieval; can handle large datasets efficiently; provides both high-level and low-level APIs for flexibility; integrates well with LLM agents. | Requires a good understanding of indexing and data management concepts; initial setup for advanced customization can be complex; may have performance issues with extremely massive datasets; dependency management can be challenging; more specialized for data retrieval compared to general agent frameworks. |
 
-Pros:
-- Easy integration with Next.js/React
-- Streaming support
-- Robust documentation
-
-Cons:
-- Limited to web frameworks
-- Requires external LLM APIs
-
-### Autogen
-
-Open source library from Microsoft for building multi-agents AI applications.
-
-Pros:
-- Enables multi-agent development
-- Includes human in the loop
-- Optimize LLM performace
-
-Cons:
-- Steep curve of learning
-- Lack of visual editor
-
-### OpenAI Agent SDK
+### Reference
 
 - [https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf)
-
-### Langchain
-- Framework for bulding LLM applications
-- Pre-built interfaces and integrations
-- Abstractions for: chains and agents
-
-### LlamaIndex
--
--
--
 
 ## 00_langchain_ollama_pynecone
 
