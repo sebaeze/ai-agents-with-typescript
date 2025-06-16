@@ -120,4 +120,5 @@ The approach consist of prompt a LLM in order to generate a list of "thoughts", 
 - [https://cloud.google.com/discover/what-are-ai-agents](https://cloud.google.com/discover/what-are-ai-agents)
 - [https://aws.amazon.com/what-is/ai-agents/](https://aws.amazon.com/what-is/ai-agents/)
 - [https://www.anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
-- 
+- [https://www.llamaindex.ai/framework](https://www.llamaindex.ai/framework)
+- [https://ts.llamaindex.ai/docs/llamaindex](https://ts.llamaindex.ai/docs/llamaindex)
