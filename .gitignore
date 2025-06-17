@@ -9,6 +9,10 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+/java_code
+/java_code/*
+java_code/*.*
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
